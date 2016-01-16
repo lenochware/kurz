@@ -1,0 +1,318 @@
+BODY {
+  background-color: white;
+  margin: 0px;
+}
+
+BODY, TD, TH, INPUT, TEXTAREA, SELECT {
+  font-family:verdana,arial,helvetica;
+  font-size: 11px;
+}
+
+A {
+color: #CC3300;
+}
+
+A:hover {
+color: #F7A610;
+}
+
+H2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* HEADER */
+DIV.header {
+  background-color: #FFD20F;
+  height: 50px;
+  border-bottom: 5px solid #CC3300;
+}
+
+DIV.menu {
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+DIV.menu TABLE {
+  background-color: white;
+  border: 0px;
+  width: 98%;
+}
+
+DIV.header H1 {
+  color: black;
+  padding: 15px 10px;
+  margin: 0px;
+  font-size: 18px;
+}
+
+DIV.main {
+padding: 20px;
+}
+
+/* GRID */
+TABLE.grid {
+  border-collapse: collapse;
+}
+
+TABLE.grid TH {
+  background-color: #E5E5E5;
+  text-align: left;
+  padding: 4px 2px;
+  padding-right: 4px;
+  border-right: 1px solid white;
+}
+
+TABLE.grid TD {
+  border-bottom: 1px solid #E5E5E5;
+  padding-right: 4px;
+  height: 20px;
+}
+
+DIV.pager {
+ padding-top: 10px;
+}
+
+DIV.pager A {
+ padding: 3px;
+ width: 20px;
+ height: 20px;
+ text-decoration: none;
+ font-weight: bold;
+ color: gray;
+}
+
+DIV.pager A:hover {
+ color: white;
+ background-color: #004DCE;
+}
+
+DIV.pager SPAN.active {
+ -moz-border-radius: 10px;
+ padding: 3px;
+ background-color: #ff9;
+ width: 20px;
+ height: 20px;
+ font-weight: bold;
+ color: #111;
+}
+
+TABLE.productdetail {
+  width: 500px;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+TABLE.productdetail TH {
+  border: 1px solid black;
+  background-color: rgb(204,255,204);
+  text-align: left;
+  padding: 4px 2px;
+  padding-right: 4px;
+  border-right: 1px solid white;
+}
+
+TABLE.productdetail TD {
+  border: 1px solid black;
+  padding-right: 4px;
+  height: 20px;
+}
+
+/* FORM */
+FORM {
+  margin: 0px;
+}
+
+input, textarea, select {
+  border: 1px solid rgb(127,157,185);
+}
+
+input.button:hover { background-color:#FFD20F }
+
+input.disabled, textarea.disabled, select.disabled {
+  background-color: rgb(212,208,200);
+}
+
+SPAN.check {
+  display: block;
+  width: 400px;
+}
+
+SPAN.check .item {
+  display: block;
+  float: left;
+  width: 200px;
+}
+
+SPAN.separ {
+  display:block;
+  clear:both;
+}
+
+UL.welcome LI {margin: 10px}
+
+FORM#orderform {
+  padding: 10px;
+  background-color: #eee;
+  border-top: 5px solid #ccc;
+  border-bottom: 5px solid #ccc;
+}
+
+/* form error messages */
+INPUT.err, SELECT.err {
+  background-color: yellow;
+}
+
+LABEL.required:before { color:red; content:"(*) "; }
+
+/* BOXES */
+
+P.blue, div.message {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid blue;
+  background-color: #ddf;
+}
+
+P.gray {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: #ddd;  
+}
+
+div.error {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid red;
+  background-color: #fdd;
+}
+
+div.warning {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid red;
+  background-color: #ffd;
+}
+
+DIV#slink {
+  width: 500px;
+  padding: 10px;
+  margin-top: 50px;
+  border: 1px solid green;
+  background-color: #dfd;
+}
+
+
+SPAN.err {
+  font-weight: bold;
+  color: red;
+}
+
+.st-progress {
+ font-style: italic;
+}
+
+.st-fin {
+ text-decoration: line-through; color: gray;
+}
+
+.st-cancel {
+ color: gray;
+}
+
+.st-open {
+}
+
+TABLE#tasklist TR:hover {background-color: pink}
+
+CODE.example {
+white-space: pre;
+}
+
+TABLE.db {
+ margin: 5px;
+}
+
+TABLE.db TD {
+  border: 1px solid gray;
+}
+
+TABLE.db TH {
+  background-color: rgb(255,210,15);
+}
+
+
+/* UL.pcmenu */
+
+ul.pcmenu {
+  padding: 0px;
+  z-index: 3000;
+  list-style: none;
+  cursor:pointer;
+}
+
+ul.pcmenu UL {
+  padding: 0px;
+  list-style: none;
+}
+
+ul.pcmenu LI {
+  padding: 5px;
+  position: relative;
+  float: left;
+}
+
+/* Menu color */
+ul.pcmenu LI {
+  background-color: #ffc;
+  color:black;
+}
+
+ul.pcmenu LI:hover {
+  background-color: black;
+  color:white;
+}
+
+/* 2nd level */
+
+ul.pcmenu LI UL LI {
+  float: none;
+  width: 150px;  /* submenu width */
+}
+
+ul.pcmenu LI UL {
+  position: absolute;
+  top: 23px;  /* submenu positioning */
+  left: -999em;  /* hide */
+  z-index: 3001;
+}
+
+ul.pcmenu LI:hover UL {
+  left: 0px;  /* show */
+}
+
+/*A over whole menu */
+ul.pcmenu LI UL A {
+  display:block;
+  width: 150px;
+  height: 15px;
+}
+
+/* decorator */
+ul.pcmenu LI UL {
+  border: 1px solid black;
+  box-shadow:3px 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+/* 3rd level */
+ul.pcmenu LI UL LI UL {
+  top: 5px;
+  margin-left: 150px;
+  display: none;
+  z-index: 3100;
+}
+
+ul.pcmenu LI UL LI:hover UL {
+  display: block;
+}
