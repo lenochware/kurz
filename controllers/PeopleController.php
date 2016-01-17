@@ -7,5 +7,10 @@ class PeopleController extends App_Controller
 		$grid->setQuery('select * from PEOPLE');
 		return $grid->html();
 	}
+
+	function showAction($id)
+	{
+		return 'Detail: '.$id;
+	}
 }
  ?>

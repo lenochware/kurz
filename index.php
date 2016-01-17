@@ -8,6 +8,10 @@ $app->addConfig('config.php');
 $app->db = new Db($app->config['test.db']);
 $app->setLayout('tpl/website.tpl');
 
+if (!$app->controller) {
+	$app->controller = 'people';
+}
+
 $app->run();
 $app->out();
 
