@@ -7,6 +7,8 @@ $app->addConfig('config.php');
 
 $app->db = new Db($app->config['test.db']);
 $app->language = 'cs';
+$app->debugMode = true;
+//$app->router->friendlyUrl = true;
 
 $app->setLayout('tpl/website.tpl');
 

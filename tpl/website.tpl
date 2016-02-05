@@ -1,5 +1,5 @@
 <?elements
-head HEAD scripts "css/styles.css"
+head HEAD scripts "css/styles.css,libs/pclib/assets/pclib.js,libs/pclib/assets/pclib.css"
 messages PRECONTENT
 ?>
 <!doctype html>

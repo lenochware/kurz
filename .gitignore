@@ -1,3 +1,4 @@
 # pclib ignore directories
 
 /libs/pclib/*
+/_etc/*
