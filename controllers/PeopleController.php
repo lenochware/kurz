@@ -22,5 +22,10 @@ class PeopleController extends App_Controller
 		$t->values = $this->db->select('PEOPLE', pri($id));
 		return $t;
 	}
+
+	function defaultAction() {
+		die('Neznama akce '.$this->app->router->action);
+	}
+
 }
  ?>
