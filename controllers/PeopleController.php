@@ -17,7 +17,7 @@ class PeopleController extends App_Controller
 
 	function showAction($id)
 	{
-		$t = new Tpl('tpl/people.tpl');
+		$t = new Tpl('tpl/people_view.tpl');
 		$t->values = $this->db->select('PEOPLE', pri($id));
 		return $t;
 	}
@@ -32,7 +32,14 @@ class PeopleController extends App_Controller
 	function updateAction($id)
 	{
 		$form = new Form('tpl/people_form.tpl');
-		dump($form->values);
+		if (!$form->validate()) {
+			$this->app->error('Chybně vyplněný formulář.');
+		}
+		
+		$form->update('PEOPLE', pri($id));
+		$this->app->message('Formulář byl odeslán.');
+		$this->app->redirect('people');
+
 	}
 
 	function defaultAction() {

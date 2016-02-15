@@ -1,5 +1,5 @@
 <?elements
-class form
+class form html5
 input NAME lb "Name:" required
 input SURNAME lb "Surname:" required
 input BIRTHDATE date "%d.%m.%Y" lb "Birth date:" size "10"

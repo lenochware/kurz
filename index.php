@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 require 'libs/pclib/pclib.php';
 
 $app = new App('demo-app');
