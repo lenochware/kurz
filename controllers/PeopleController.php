@@ -17,10 +17,22 @@ class PeopleController extends App_Controller
 
 	function showAction($id)
 	{
-		$t = new Tpl;
-		$t->create('PEOPLE');
+		$t = new Tpl('tpl/people.tpl');
 		$t->values = $this->db->select('PEOPLE', pri($id));
 		return $t;
+	}
+
+	function editAction($id)
+	{
+		$form = new Form('tpl/people_form.tpl');
+		$form->values = $this->db->select('PEOPLE', pri($id));
+		return $form;
+	}
+
+	function updateAction($id)
+	{
+		$form = new Form('tpl/people_form.tpl');
+		dump($form->values);
 	}
 
 	function defaultAction() {

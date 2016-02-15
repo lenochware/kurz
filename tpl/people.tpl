@@ -6,6 +6,7 @@ string BIRTHDATE date sort
 string PROFESSION sort
 string MONEY sort
 link lnshow lb "Detail" route "people/show/id:{ID}"
+link lnedit lb "Editovat" route "people/edit/id:{ID}"
 pager pager pglen "20"
 ?>
 <h2>People</h2>
