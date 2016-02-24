@@ -1,0 +1,45 @@
+PCLIB pro pokročilé
+====================
+
+- GitHub.com
+- camelCase
+- Exceptions
+- Tabulátory
+- PHP 5.3+
+
+## Body:
+- PDO, pclib.compatibility
+- $app->config
+- $app->layout
+- controller: index, default, init
+- nastaveni default controlleru: $app->controller = 'people';
+- routovani, .htAccess
+- head, $app->layout->addScripts()
+-	onprint s volanim metody controlleru
+- action parametry: id, name, default parametr, route
+- pclib.errors, enviroment, enviromentIp (errors, mailing, debugging etc.)
+- $app->language
+- $app->debugMode
+- $this->app v controlleru, BaseController (striktni kontrola nazvu attr), app->getController()
+- default create template
+- $app->message() s cssClass
+- people.tpl .labels .fields, dodatecna pole, skip
+- block else, if
+- dump, jdump
+
+## Bootstrap:
+bsgrid
+
+## Sablony: 
+html5, button, select-group, checkbox-groups, nove required, html_*, csrf...
+
+## Dodatky:
+- adresare (system: podobjekty primo nepouzivane, extensions: nadobjekty)
+- udalosti, onException, onAfterQuery, BaseObject kontrola poli objektu
+- mozna predvest Tpl->create, Form->create v showAction
+- paramstr, extractpath
+
+
+## Nastroje:
+- padmin
+- ftp-deploy

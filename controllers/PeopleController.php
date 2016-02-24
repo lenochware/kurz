@@ -25,7 +25,7 @@ class PeopleController extends App_Controller
 	function editAction($id)
 	{
 		//striktni kontrola jmen atributu
-		$this->bd->select('select * from PEOPLE');
+		//$this->bd->select('select * from PEOPLE');
 
 		$form = new Form('tpl/people_form.tpl');
 		$form->values = $this->db->select('PEOPLE', pri($id));
