@@ -10,20 +10,9 @@ $app->addConfig('config.php');
 $app->db = new Db($app->config['test.db']);
 $app->language = 'cs';
 
-/*
-$app->db->onAfterQuery[] = function($event) {
-	print_r($event->data);
-};
-*/
-
-$app->errorHandler->onException[] = function($event) {
-	print "posli email";
-};
-
 if ($app->enviroment == 'develop') {
 	$app->debugMode = true;
 }
-
 
 $app->setLayout('tpl/website.tpl');
 
