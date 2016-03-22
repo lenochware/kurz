@@ -3,14 +3,14 @@
 session_start();
 require 'libs/pclib/pclib.php';
 
-$app = new App('demo-app');
+$app = new PCApp('demo-app');
 
 $app->addConfig('config.php');
 
-$app->db = new Db($app->config['test.db']);
+$app->db = new PCDb($app->config['test.db']);
 $app->language = 'cs';
 
-if ($app->enviroment == 'develop') {
+if ($app->environment == 'develop') {
 	$app->debugMode = true;
 }
 

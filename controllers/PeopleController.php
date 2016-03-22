@@ -1,6 +1,6 @@
 <?php 
 
-class PeopleController extends App_Controller 
+class PeopleController extends PCController 
 {
 	protected $db;
 
@@ -10,14 +10,14 @@ class PeopleController extends App_Controller
 	}
 
 	function indexAction() {
-		$grid = new Grid('tpl/people.tpl');
+		$grid = new PCGrid('tpl/people.tpl');
 		$grid->setQuery('select * from PEOPLE');
 		return $grid->html();
 	}
 
 	function showAction($id)
 	{
-		$t = new Tpl('tpl/people_view.tpl');
+		$t = new PCTpl('tpl/people_view.tpl');
 		$t->values = $this->db->select('PEOPLE', pri($id));
 		return $t;
 	}
@@ -27,14 +27,14 @@ class PeopleController extends App_Controller
 		//striktni kontrola jmen atributu
 		//$this->bd->select('select * from PEOPLE');
 
-		$form = new Form('tpl/people_form.tpl');
+		$form = new PCForm('tpl/people_form.tpl');
 		$form->values = $this->db->select('PEOPLE', pri($id));
 		return $form;
 	}
 
 	function updateAction($id)
 	{
-		$form = new Form('tpl/people_form.tpl');
+		$form = new PCForm('tpl/people_form.tpl');
 		if (!$form->validate()) {
 			$this->app->error('Chybně vyplněný formulář.');
 		}
